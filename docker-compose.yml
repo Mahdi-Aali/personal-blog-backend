@@ -1,0 +1,13 @@
+services:
+  personalblog.configserver.api:
+    image: ${DOCKER_REGISTRY-}personalblogconfigserverapi
+    build:
+      context: .
+      dockerfile: config-server/personalblog.configserver.api/Dockerfile
+    networks:
+      - personal-blog
+
+
+networks:
+  personal-blog:
+    driver: bridge
