@@ -1,25 +1,17 @@
-var builder = WebApplication.CreateBuilder(args);
+using personalblog.buildingblocks.framework.api;
+using personalblog.buildingblocks.framework.api.Bootstrappers;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+namespace personalblog.sso.web;
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+public class Program : SsoStartup
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public static async Task Main(string[] args)
+    {
+        await RunAsync(args);
+    }
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+public class SsoStartup : ApiStartup<ApiBootstrapper>
+{
 
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();
+}

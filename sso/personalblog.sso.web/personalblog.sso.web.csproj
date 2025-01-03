@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\buildingblocks\framework\personalblog.buildingblocks.framework.api\personalblog.buildingblocks.framework.api.csproj" />
+    <ProjectReference Include="..\personalblog.sso.application\personalblog.sso.application.csproj" />
+    <ProjectReference Include="..\personalblog.sso.infrastructure\personalblog.sso.infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

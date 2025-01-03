@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\buildingblocks\framework\personalblog.buildingblocks.framework.common\personalblog.buildingblocks.framework.common.csproj" />
+    <ProjectReference Include="..\..\buildingblocks\logging\personalblog.buildingblocks.logging\personalblog.buildingblocks.logging.csproj" />
   </ItemGroup>
 
 </Project>
