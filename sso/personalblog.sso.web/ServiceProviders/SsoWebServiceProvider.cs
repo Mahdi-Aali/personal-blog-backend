@@ -8,6 +8,7 @@ public class SsoWebServiceProvider : IFrameworkServiceProvider
 {
     public IServiceCollection GetServices(IServiceCollection services, Assembly[] assemblies, IConfiguration configurations)
     {
+        
         AddSwagger(services);
         AddSerilog(services);
         AddRazorPages(services);
@@ -27,6 +28,7 @@ public class SsoWebServiceProvider : IFrameworkServiceProvider
 
     public void AddSwagger(IServiceCollection services)
     {
+        services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }
 
