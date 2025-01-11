@@ -7,7 +7,7 @@
   },
   "AllowedHosts": "*",
   "elastic": {
-    "url": "https://es01:9200",
+    "url": "https://personalblog-es01-1:9200",
     "username": "elastic",
     "password": "elasticadmin",
     "indexPrefix": "personalblog-sso-"
