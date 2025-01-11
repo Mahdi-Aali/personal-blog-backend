@@ -184,7 +184,17 @@ services:
     restart: always
  
 
-
+  sqlserver:
+    container_name: sql-server
+    image: ${DOCKER_REGISTRY-}mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "M4#d1@4l1@@@!Sq153._v3R"
+    ports:
+      - 1433:1433
+    volumes:
+      - personalblog-sqlserver:/var/opt/mssql
 
   personalblog.sso.web:
     image: ${DOCKER_REGISTRY-}personalblogssoweb
@@ -197,10 +207,10 @@ services:
     ports:
       - "9001:8080"
     restart: always
+    depends_on:
+      - es01
+      - sqlserver
 
-networks:
-  personal-blog:
-    driver: bridge
 
 volumes:
   certs:
@@ -210,4 +220,6 @@ volumes:
   esdata02:
     driver: local
   kibanadata:
+    driver: local
+  personalblog-sqlserver:
     driver: local

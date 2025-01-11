@@ -31,7 +31,4 @@ public class SsoWebServiceProvider : IFrameworkServiceProvider
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }
-
-
-
 }
