@@ -195,6 +195,9 @@ services:
       dockerfile: sso/personalblog.sso.web/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "9001:8080"
     networks:
       - personal-blog
     restart: always
