@@ -10,10 +10,7 @@
     "url": "https://es01:9200",
     "username": "elastic",
     "password": "elasticadmin",
-    "exceptionLogIndex": "personalblog_sso_exception_logs",
-    "metricLogIndex": "personalblog_sso_metric_logs",
-    "dataBaseLogIndex": "personalblog_sso_database_logs",
-    "applicationLogIndex": "personalblog_sso_application_logs"
+    "indexPrefix": "personalblog-sso-"
   },
   "connectionStrings": {
     "Default": "Server=sqlserver;Database=PersonalBlog_SSO;User Id=SA;Password=M4#d1@4li;Encrypt=false;MultipleActiveResultsSet=true;"

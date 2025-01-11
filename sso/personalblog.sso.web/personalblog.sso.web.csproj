@@ -20,4 +20,6 @@
     <ProjectReference Include="..\personalblog.sso.infrastructure\personalblog.sso.infrastructure.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1production_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>
