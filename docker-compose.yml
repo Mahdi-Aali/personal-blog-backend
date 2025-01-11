@@ -188,6 +188,17 @@ services:
 
 
 
+  personalblog.sso.web:
+    image: ${DOCKER_REGISTRY-}personalblogssoweb
+    build:
+      context: .
+      dockerfile: sso/personalblog.sso.web/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - personal-blog
+    restart: always
+
 networks:
   personal-blog:
     driver: bridge

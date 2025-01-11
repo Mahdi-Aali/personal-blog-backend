@@ -3,7 +3,7 @@ using personalblog.buildingblocks.framework.api.Bootstrappers;
 
 namespace personalblog.sso.web;
 
-public class Program : SsoStartup
+public class Program : ApiStartup<SsoBootstrapper>
 {
     public static async Task Main(string[] args)
     {
@@ -11,7 +11,7 @@ public class Program : SsoStartup
     }
 }
 
-public class SsoStartup : ApiStartup<ApiBootstrapper>
+public class SsoBootstrapper : ApiBootstrapper
 {
-
+ 
 }

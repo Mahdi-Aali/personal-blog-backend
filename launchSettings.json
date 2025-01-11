@@ -4,7 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "personalblog.configserver.api": "StartDebugging"
+        "personalblog.configserver.api": "StartDebugging",
+        "personalblog.sso.web": "StartDebugging"
       }
     }
   }

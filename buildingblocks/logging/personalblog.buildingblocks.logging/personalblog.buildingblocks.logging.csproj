@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elastic.Serilog.Sinks" Version="8.12.3" />
     <PackageReference Include="serilog" Version="4.2.0" />
     <PackageReference Include="serilog.aspnetcore" Version="9.0.0" />
     <PackageReference Include="serilog.extensions.hosting" Version="9.0.0" />
     <PackageReference Include="serilog.sinks.console" Version="6.0.0" />
-    <PackageReference Include="serilog.sinks.elasticsearch" Version="10.0.0" />
   </ItemGroup>
 
 </Project>

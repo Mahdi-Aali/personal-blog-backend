@@ -24,7 +24,7 @@ public abstract class BootstrapperBase
 
     private Assembly[] LoadAssemblies()
     {
-        return GetType().Assembly.GetReferencedAssemblies()
+        return Assembly.GetExecutingAssembly().GetReferencedAssemblies()
             .Where(x => x.Name!.Contains("personalblog", StringComparison.OrdinalIgnoreCase))
             .Select(asm => Assembly.Load(asm))
             .Concat([GetType().Assembly])
@@ -33,6 +33,7 @@ public abstract class BootstrapperBase
 
     private IConfiguration LoadConfigurations()
     {
+        var envs = Environment.GetEnvironmentVariables();
         string stage = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")!;
 
         string fileName = $"appsettings.{stage}.json";
